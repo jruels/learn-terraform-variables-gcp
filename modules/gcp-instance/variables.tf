@@ -1,3 +1,7 @@
+variable "instance_count" {
+  description = "Number of GCP instances to deploy"
+  type        = number
+}
 variable "name_prefix" {
   description = "Prefix for instance names"
   type        = string

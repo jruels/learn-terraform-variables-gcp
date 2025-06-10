@@ -1,5 +1,5 @@
 resource "google_compute_instance" "vm" {
-  count        = 1
+  count = var.instance_count
   name         = "${var.name_prefix}-${count.index}"
   machine_type = var.machine_type
   zone         = var.zone

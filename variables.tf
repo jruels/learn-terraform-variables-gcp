@@ -3,18 +3,19 @@
 variable "project_id" {
   description = "The ID of the GCP project"
   type        = string
+  default     = "YOUR-PROJECT-ID" # Replace with your project ID
 }
 
 variable "region" {
   description = "The region to deploy resources to"
   type        = string
-  default     = "us-central1"
+  default     = "us-west1"
 }
 
 variable "zone" {
   description = "The zone to deploy resources to"
   type        = string
-  default     = "us-central1-a"
+  default     = "us-west1-a"
 }
 
 variable "private_subnet_cidr_blocks" {
@@ -33,12 +34,6 @@ variable "public_subnet_cidr_blocks" {
     "10.0.1.0/24",
     "10.0.2.0/24"
   ]
-}
-
-variable "instance_count" {
-  description = "Number of instances to provision"
-  type        = number
-  default     = 2
 }
 
 variable "environment" {

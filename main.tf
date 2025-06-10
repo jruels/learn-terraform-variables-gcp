@@ -88,7 +88,7 @@ module "cloud_router" {
 module "instances" {
   source = "./modules/gcp-instance"
 
-  instance_count = var.instance_count
+  instance_count = 2
   name_prefix    = "${var.project_name}-${var.environment}"
   machine_type   = "e2-micro"
   zone          = var.zone
